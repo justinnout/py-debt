@@ -1,0 +1,11 @@
+**/*pycache*
+*.pyc
+**/.pytest_cache
+**/.coverage
+**/.tox
+*virtualenv*
+**/.venv
+.env
+
+.idea/*
+.vscode
