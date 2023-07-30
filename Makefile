@@ -1,6 +1,13 @@
 .PHONY: development
 development: virtualenv_run install-hooks
 
+.PHONY: virtualenv_run
+virtualenv_run:
+	python -m venv virtualenv_run
+	virtualenv_run/bin/pip install --upgrade pip setuptools wheel
+	virtualenv_run/bin/pip install -r requirements.txt
+	virtualenv_run/bin/pip install pre-commit
+
 .PHONY: install-hooks
 install-hooks: virtualenv_run
 	./virtualenv_run/bin/pre-commit install -f --install-hooks
