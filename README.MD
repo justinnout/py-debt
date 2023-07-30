@@ -12,10 +12,10 @@ This prepares your environment so you can run tests and pre-commits.
 make development
 ```
 
-### Run (fixing)
+### Run
 
 ```
-python3 simpledebt/main.py
+make run
 ```
 
 ### Run tests

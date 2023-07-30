@@ -1,6 +1,10 @@
 .PHONY: development
 development: virtualenv_run install-hooks
 
+.PHONY: run
+run: virtualenv_run
+	python simpledebt/main.py
+
 .PHONY: virtualenv_run
 virtualenv_run:
 	python -m venv virtualenv_run
